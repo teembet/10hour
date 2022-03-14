@@ -18,7 +18,7 @@ const DeletedProfiles = () => {
           }
           return false
          })
-         console.log(results,"results")
+        
          setSavedList(results)
       }
            },[savedList]);

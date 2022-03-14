@@ -6,12 +6,10 @@ import Link from 'react-router-dom/Link'
 const SavedProfiles = () => {
     const savedList=useSelector((state)=>state.savedProfile)
     useEffect(()=>{
-      console.log(savedList)
+
       if(savedList===undefined){
         return <Redirect to="/"/>
           
-      }else{
-          console.log(savedList)
       }
            },[savedList]);
 

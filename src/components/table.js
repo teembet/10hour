@@ -3,13 +3,11 @@ import { deleteProfile, fetchProfiles, saveProfile,deletedProfile } from '../red
 import { useDispatch, useSelector } from 'react-redux';
 import {Alert, Avatar, Table, Button, Spin,  } from 'antd';
 import { DownloadOutlined } from '@ant-design/icons';
-
 import Search from './search'
 import PaginationComponent from './pagination';
 const TableRecords = ({savedList,viewData}) => {
 const dispatch = useDispatch();
 const profileList=useSelector((state)=>state.profiles)
-// const profileList=useSelector((state)=>state.next)
 const [job_title, setJobTitle] = useState('');
 const [exp, setExp] = useState("");
 const [city, setCity] = useState("");
@@ -38,7 +36,6 @@ const  handleDeletePatient= async(profile,id)=>{
 
 const onClose=()=>SetSaveAlert(false)
 
-// const pagination = savedList.length <= 10 ? false : {};
 
   const actions = (profile) => (
     <div className='buttons-list nowrap'>
@@ -173,7 +170,7 @@ default:
    const pageChange=()=>{
 
 setCursor(localStorage.getItem("nextPage"))
-//page changed
+
    }
   return (
 <>

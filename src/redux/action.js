@@ -25,7 +25,6 @@ import axios from 'axios';
   export const fetchProfiles = (job_title,exp,city,country,cursor) => {
      
     return dispatch => {
-      // ${process.env.REACT_APP_BASE_URL}
       axios
         .get(`https://fictus.10hourlabs.com/talents?job_title=${job_title}&years_of_experience=${exp}&city=${city}&country=${country}&cursor=${cursor}`)
         .then(res => {   
